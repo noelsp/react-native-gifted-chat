@@ -1,15 +1,8 @@
 {
-<<<<<<< Updated upstream
   "name": "react-native-gifted-chat",
   "version": "0.9.1",
   "description": "The most complete chat UI for React Native",
   "main": "node_modules/expo/AppEntry.js",
-=======
-  "name": "@noeel.sp/react-native-gifted-chat",
-  "version": "0.8.2",
-  "description": "Forked from FaridSafi/react-native-gifted-chat  - The most complete chat UI for React Native",
-  "main": "lib/index.js",
->>>>>>> Stashed changes
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
@@ -41,12 +34,8 @@
     "test": "TZ=Europe/Paris jest --no-watchman",
     "test:watch": "TZ=Europe/Paris jest --watch",
     "test:coverage": "TZ=Europe/Paris jest --coverage",
-<<<<<<< Updated upstream
     "prepublishOnly": "yarn lint && yarn build && yarn test && yarn config:npm",
     "postpublish": "yarn config:dev"
-=======
-    "prepublishOnly": "yarn lint && yarn build"
->>>>>>> Stashed changes
   },
   "jest": {
     "preset": "react-native",
@@ -83,18 +72,10 @@
     "@types/react-test-renderer": "16.8.1",
     "@types/uuid": "3.4.4",
     "babel-core": "^7.0.0-bridge.0",
-<<<<<<< Updated upstream
     "babel-jest": "24.7.1",
     "babel-preset-expo": "^5.0.0",
     "husky": "0.15.0-rc.2",
     "jest-expo": "^32.0.0",
-=======
-    "babel-jest": "^24.7.1",
-    "husky": "0.15.0-rc.2",
-    "jest": "24.7.1",
-    "jest-expo": "^32.0.1",
-    "metro-react-native-babel-preset": "0.53.1",
->>>>>>> Stashed changes
     "prettier": "1.15.3",
     "prop-types": "15.6.2",
     "react": "16.5.1",
