@@ -117,7 +117,8 @@ export default class MessageContainer extends React.PureComponent<
     showScrollBottom: false,
   }
 
-  flatListRef?: RefObject<FlatList<IMessage>> = undefined
+  flatListRef?: RefObject<FlatList<IMessage>> = React.createRef();
+  // React.createRef<Text>();
 
   componentDidMount() {
     if (this.props.messages && this.props.messages.length === 0) {
@@ -209,6 +210,12 @@ export default class MessageContainer extends React.PureComponent<
   scrollTo(options: { animated?: boolean; offset: number }) {
     if (this.flatListRef && this.flatListRef.current && options) {
       this.flatListRef.current.scrollToOffset(options)
+    }
+  }
+
+  scrollToEnd(options: { animated?: boolean }) {
+    if (this.flatListRef && this.flatListRef.current && options) {
+      this.flatListRef.current.scrollToEnd(options)
     }
   }
 

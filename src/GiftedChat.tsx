@@ -320,7 +320,7 @@ class GiftedChat extends React.Component<GiftedChatProps, GiftedChatState> {
   invertibleScrollViewProps: any = undefined
   _actionSheetRef: any = undefined
 
-  _messageContainerRef?: RefObject<MessageContainer> = React.createRef()
+  _messageContainerRef?: RefObject<MessageContainer> = React.createRef<MessageContainer>()
   textInput?: any
 
   state = {
@@ -565,7 +565,13 @@ class GiftedChat extends React.Component<GiftedChatProps, GiftedChatState> {
 
   scrollToBottom(animated = true) {
     if (this._messageContainerRef && this._messageContainerRef.current) {
-      this._messageContainerRef.current.scrollTo({ offset: 0, animated })
+      if(this.invertibleScrollViewProps.inverted){
+        console.log('Ingreso al scrollToBottom de GiftedChat. INVERTED');
+        this._messageContainerRef.current.scrollTo({ offset: 0, animated })
+      } else {
+        console.log('Ingreso al scrollToBottom de GiftedChat. NO INVERTED');
+        this._messageContainerRef.current.scrollToEnd({animated});
+      }
     }
   }
 
